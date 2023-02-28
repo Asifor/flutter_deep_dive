@@ -1,4 +1,4 @@
-# crash_flutter
+# Flutter Deep Dive
 
 A new Flutter project.
 
