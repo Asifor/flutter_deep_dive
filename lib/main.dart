@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.red),
-      home: RootPage(),
+      home: const RootPage(),
     );
   }
 }
@@ -25,10 +25,22 @@ class RootPage extends StatefulWidget {
 }
 
 class _RootPageState extends State<RootPage> {
+  int currentPage = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Deep Dive"),
+      ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            debugPrint('Floating Action Button');
+          },
+          child: const Icon(Icons.add)),
+      bottomNavigationBar: NavigationBar(destinations: const [
+        NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+        NavigationDestination(icon: Icon(Icons.home), label: 'Profile'),
+      ]),
     );
   }
 }
