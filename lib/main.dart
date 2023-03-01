@@ -9,22 +9,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.red),
+      home: RootPage(),
     );
   }
 }
 
-class name extends StatefulWidget {
-  const name({super.key});
+class RootPage extends StatefulWidget {
+  const RootPage({super.key});
 
   @override
-  State<name> createState() => _nameState();
+  State<RootPage> createState() => _RootPageState();
 }
 
-class _nameState extends State<name> {
+class _RootPageState extends State<RootPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 }
