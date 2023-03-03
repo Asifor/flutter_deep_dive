@@ -101,7 +101,8 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
                     },
                   );
                 }),
-            Image.network('https://walpaperaccess.com/full/1909531.jpg')
+            Image.network(
+                'https://images.pexels.com/photos/12394537/pexels-photo-12394537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
           ],
         ),
       ),
